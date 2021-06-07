@@ -7,7 +7,7 @@ const CartItem = ({item, onDelete}) => {
     return (
         <View style={styles.itemView}>
             <Text style={styles.itemText}>{item.name}</Text>
-            <Text style={styles.itemText}>${item.price}</Text>
+            <Text style={styles.itemText}>${(item.price).toFixed(2)}</Text>
             <AntDesign
                 name="close" 
                 size={30}

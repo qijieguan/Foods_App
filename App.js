@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native';
 import Header from './component/Header.js';
 import Home from './component/Home.js';
 import Menu from './component/Menu.js';
+import Offer from './component/Offer.js';
 import Order from './component/Order.js';
 import Footer from './component/Footer.js';
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,6 +22,7 @@ const App = () => {
       <Tab.Navigator> 
         <Tab.Screen name="Home" component={Home}/>
         <Tab.Screen name="Menu" component={Menu}/>
+        <Tab.Screen name="Offer" component={Offer}/>
         <Tab.Screen name="Order" component={Order}/>
       </Tab.Navigator>
       <Footer />

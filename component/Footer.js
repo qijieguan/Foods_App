@@ -26,7 +26,7 @@ const Footer = () => {
                 />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.footLi}>
+            <TouchableOpacity style={styles.footLi} onPress={() => RootNavigation.navigate('Offer')}>
                 <FontAwesome5
                     name="grin-stars"
                     size={30}

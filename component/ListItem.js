@@ -10,7 +10,7 @@ const ListItem = ({item, addCart}) => {
                 {item.name}
             </Text>
             <Text style={styles.itemText}>
-                ${item.price}
+                ${(item.price).toFixed(2)}
             </Text>
             <Text style={styles.itemText}>
                 cal. {item.calories}

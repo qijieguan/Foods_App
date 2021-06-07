@@ -63,7 +63,7 @@ const Order = () => {
                 renderItem={({item}) => <CartItem item={item} onDelete={onDelete}/>}
             />
             <Text style={styles.total}>
-                Total: ${totalPrice}
+                Total: ${(totalPrice).toFixed(2)}
             </Text>
             <View style={styles.btnContainer}>
                 <TouchableOpacity style={styles.cancelBtnView} onPress={cancelOrder}>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     },
     total: {
         top: 500,
-        left: 250,
+        left: 225,
         position: 'absolute',
         fontSize: 24,
         color: 'red',
