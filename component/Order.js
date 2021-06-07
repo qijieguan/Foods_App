@@ -26,7 +26,7 @@ const Order = () => {
         } catch (error) {
             console.log(error);
         }
-    }, [isFocused, deleteItem]);
+    }, [isFocused]);
 
     const calcBalance = (items) => {
         let calcTotal = 0;
@@ -47,6 +47,7 @@ const Order = () => {
         let prevItems = cartItems;
         prevItems = prevItems.filter(item => item.id !== itemID);
         setCartItems(prevItems);
+        calcBalance(prevItems);
         if (prevItems.length > 0) {
             await AsyncStorage.setItem("cartItems", JSON.stringify(prevItems));
         }
@@ -78,10 +79,12 @@ const Order = () => {
 
 const styles = StyleSheet.create({
     orderView: {
-        marginTop: 40
+        paddingTop: 40,
+        height: '100%',
+        backgroundColor: 'bisque'
     },
     total: {
-        top: 475,
+        top: 500,
         left: 250,
         position: 'absolute',
         fontSize: 24,
@@ -89,7 +92,7 @@ const styles = StyleSheet.create({
         zIndex: 2
     },
     btnContainer: {
-        top: 550,
+        top: 575,
         position: 'absolute',
         width: '100%',
         zIndex: 2

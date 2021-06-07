@@ -99,10 +99,10 @@ const Menu = () => {
 
 const styles = StyleSheet.create({
     menuView: {
-        height: 'auto',
+        height: '100%',
         display: 'flex',
         paddingTop: 15,
-        backgroundColor: 'beige',
+        backgroundColor: 'bisque',
         alignItems: 'center',
         justifyContent: 'space-between'
     },

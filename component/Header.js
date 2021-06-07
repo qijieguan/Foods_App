@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/dist/Feather';
+import Feather from 'react-native-vector-icons/dist/Feather';
 
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
             <Text style={styles.logo}>
                 <Text>FoodsApp</Text>
             </Text>
-            <Icon 
+            <Feather 
                 name="menu"
                 size={30}
                 color="white"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/dist/AntDesign';
+import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 
 
 const CartItem = ({item, onDelete}) => {
@@ -8,7 +8,7 @@ const CartItem = ({item, onDelete}) => {
         <View style={styles.itemView}>
             <Text style={styles.itemText}>{item.name}</Text>
             <Text style={styles.itemText}>${item.price}</Text>
-            <Icon
+            <AntDesign
                 name="close" 
                 size={30}
                 color='firebrick'
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 1,
         borderColor: 'gray',
-        height: 60
+        height: 60,
+        backgroundColor: 'white'
     },
     itemText: {
         textAlign: 'center',
