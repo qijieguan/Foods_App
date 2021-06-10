@@ -4,6 +4,7 @@ import Feather from 'react-native-vector-icons/dist/Feather';
 
 
 const Header = () => {
+    
     return (
         <View style={styles.header}>
             <Text style={styles.logo}>
@@ -13,6 +14,7 @@ const Header = () => {
                 name="menu"
                 size={30}
                 color="white"
+                onPress={() => {}}
             />
         </View>
     );

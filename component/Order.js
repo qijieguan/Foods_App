@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'bisque'
     },
     total: {
-        top: 500,
+        top: 425,
         left: 225,
         position: 'absolute',
         fontSize: 24,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         zIndex: 2
     },
     btnContainer: {
-        top: 575,
+        top: 505,
         position: 'absolute',
         width: '100%',
         zIndex: 2

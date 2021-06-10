@@ -15,11 +15,13 @@ const Offer = () => {
 const styles = StyleSheet.create({
     offerView: {
         alignItems: 'center',
-        justifyContent: 'center',
         height: '100%',
         backgroundColor: 'bisque'
     },
     offerText: {
+        textAlign: 'center',
+        marginTop: 200,
+        width: '70%',
         fontSize: 30,
         color: 'orange'
     }
