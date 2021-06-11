@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import Feather from 'react-native-vector-icons/dist/Feather';
-
+import { DrawerActions } from '@react-navigation/native';
+import * as RootNavigation from '../RootNavigation.js';
 
 const Header = () => {
-    
+
+
     return (
         <View style={styles.header}>
             <Text style={styles.logo}>
@@ -14,7 +16,7 @@ const Header = () => {
                 name="menu"
                 size={30}
                 color="white"
-                onPress={() => {}}
+                onPress={() => {RootNavigation.dispatch(DrawerActions.toggleDrawer())}}
             />
         </View>
     );
