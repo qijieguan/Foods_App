@@ -6,7 +6,6 @@ import * as RootNavigation from '../RootNavigation.js';
 
 const Header = () => {
 
-
     return (
         <View style={styles.header}>
             <Text style={styles.logo}>
@@ -32,6 +31,7 @@ const styles = StyleSheet.create({
     logo: {
         height: 50,
         fontSize: 20,
+        fontWeight: 'bold',
         letterSpacing: 2,
         textAlign: 'center',
         color: 'white',

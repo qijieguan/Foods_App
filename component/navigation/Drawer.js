@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Login from '../Login.js';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import BottomTab from './BottomTab.js';
+import SignIn from '../SignIn.js';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Drawer = () => {
 
@@ -11,7 +11,7 @@ const Drawer = () => {
     return (
         <Drawer.Navigator initialRouteName="Home">
             <Drawer.Screen name="Home" component={BottomTab}/>
-            <Drawer.Screen name="Login" component={Login}/>
+            <Drawer.Screen name="Sign In" component={SignIn}/>
         </Drawer.Navigator>
     );
 };
