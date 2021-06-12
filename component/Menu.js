@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native';
 import ListItem from './ListItem.js';
+import Category from './Category.js';
 import AsyncStorage from '@react-native-community/async-storage';
 import { useIsFocused } from '@react-navigation/native';
 import uuid from 'uuid/v4';
@@ -41,26 +42,28 @@ const Menu = () => {
             id: uuid(),
             name: 'Drinks',
             price: 1.50,
-            category: 'drinks',
+            category: 'beverage',
             calories: 150
         },
         {
             id: uuid(),
             name: 'Coffee',
             price: 1.50,
-            category: 'drinks',
+            category: 'beverage',
             calories: 150
         },
         {
             id: uuid(),
             name: 'Shake',
             price: 2.00,
-            category: 'drinks',
+            category: 'beverage',
             calories: 200
         }
     ];
 
     const [cartItems, setCartItems] = useState([]);
+    const [isSelect, setIsSelect] = useState(false) 
+    const [selectItems, setSelectItems] = useState(items);
     const isFocused = useIsFocused();
 
     useEffect(async () => {
@@ -72,11 +75,15 @@ const Menu = () => {
             else {
                 setCartItems([]);
             }
+            if (isSelect === true) {
+                console.log(selectItems);
+            }
+            setIsSelect(false);
             console.log('render!')
         } catch (error) {
             console.log(error);
         }
-    }, [isFocused])
+    }, [isFocused, isSelect])
 
     const addCart = async (item) => {
         let prevItems = cartItems;
@@ -86,11 +93,27 @@ const Menu = () => {
         await AsyncStorage.setItem("cartItems", JSON.stringify(prevItems));  
     };
 
+    const onSelect = category => {
+        let prevItems = items;
+        if (category === "burger") {
+            prevItems = prevItems.filter(item => item.category === "burger");
+        }
+        else if (category === "side") {
+            prevItems = prevItems.filter(item => item.category === "side");
+        }
+        else {
+            prevItems = prevItems.filter(item => item.category === "beverage");
+        }
+        console.log(prevItems);
+        setSelectItems(prevItems);
+    };
+
     return (
         <View style={styles.menuView}>
             <Text style={styles.menuLogo}>Menu</Text>
+            <Category items={items} onSelect={onSelect}/>
             <FlatList 
-                data={items} 
+                data={selectItems} 
                 renderItem={({item}) => <ListItem item={item} addCart={addCart}/>} 
             />
         </View>
@@ -107,11 +130,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     menuLogo: {
-        fontSize: 24,
+        fontSize: 26,
         fontWeight: 'bold',
         marginBottom: 10,
         color: 'red'
-    }
+    },
 });
 
 export default Menu;
