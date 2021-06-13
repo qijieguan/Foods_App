@@ -22,7 +22,7 @@ const Order = () => {
             else {
                 setCartItems([]);
             }
-            console.log('render!');
+            //console.log('render!');
         } catch (error) {
             console.log(error);
         }
@@ -84,18 +84,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'bisque'
     },
     total: {
-        top: 425,
-        left: 225,
-        position: 'absolute',
+        marginLeft: '60%',
+        marginTop: 20,
+        marginBottom: 140,
         fontSize: 24,
         color: 'red',
-        zIndex: 2
     },
     btnContainer: {
         top: 505,
         position: 'absolute',
         width: '100%',
-        zIndex: 2
     },
     cancelBtnView: {
         alignItems: 'center',

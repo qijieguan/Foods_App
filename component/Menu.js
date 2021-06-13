@@ -62,7 +62,7 @@ const Menu = () => {
     ];
 
     const [cartItems, setCartItems] = useState([]);
-    const [isSelect, setIsSelect] = useState(false) 
+    const [isAdd, setIsAdd] = useState(false);
     const [selectItems, setSelectItems] = useState(items);
     const isFocused = useIsFocused();
 
@@ -75,27 +75,26 @@ const Menu = () => {
             else {
                 setCartItems([]);
             }
-            if (isSelect === true) {
-                console.log(selectItems);
-            }
-            setIsSelect(false);
-            console.log('render!')
+            setIsAdd(false);
+            //console.log('render!')
         } catch (error) {
             console.log(error);
         }
-    }, [isFocused, isSelect])
+    }, [isFocused, isAdd])
 
     const addCart = async (item) => {
         let prevItems = cartItems;
         item.id = uuid();
         prevItems.push(item);
         setCartItems(prevItems);
+        setIsAdd(true);
         await AsyncStorage.setItem("cartItems", JSON.stringify(prevItems));  
     };
 
     const onSelect = category => {
         let prevItems = items;
-        if (category === "burger") {
+        if (category === "all") {}
+        else if (category === "burger") {
             prevItems = prevItems.filter(item => item.category === "burger");
         }
         else if (category === "side") {
@@ -104,14 +103,13 @@ const Menu = () => {
         else {
             prevItems = prevItems.filter(item => item.category === "beverage");
         }
-        console.log(prevItems);
         setSelectItems(prevItems);
     };
 
     return (
         <View style={styles.menuView}>
             <Text style={styles.menuLogo}>Menu</Text>
-            <Category items={items} onSelect={onSelect}/>
+            <Category onSelect={onSelect}/>
             <FlatList 
                 data={selectItems} 
                 renderItem={({item}) => <ListItem item={item} addCart={addCart}/>} 
