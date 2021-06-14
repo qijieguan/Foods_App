@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 24,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'lightgreen'
     },
     inputView: {
         marginLeft: '5%',
