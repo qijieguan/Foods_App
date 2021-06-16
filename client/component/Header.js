@@ -26,7 +26,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: 'orange',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 10,
     },
     logo: {
         height: 50,

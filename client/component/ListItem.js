@@ -29,27 +29,37 @@ const styles = StyleSheet.create({
         height: 60,
         marginTop: 10,
         marginBottom: 10,
-        borderWidth: 1,
-        borderColor: 'gray',
         flexDirection: 'row',
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderWidth: 1,
+        borderColor: 'gray',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 10,
     },
     itemText: {
         textAlign: 'center',
         width: '26.6%',
         color: 'red',
-        fontSize: 16
+        fontSize: 16,
+        fontWeight: 'bold'
     },
     getView: {
         paddingTop: 15,
         paddingBottom: 15,
         backgroundColor: 'red',
         width: '20%',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 10,
     },
     getText: {
         textAlign: 'center',
+        fontWeight: 'bold',
         color: 'white',
     }
 });

@@ -23,15 +23,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        height: 60,
+        backgroundColor: 'white',
         borderWidth: 1,
         borderColor: 'gray',
-        height: 60,
-        backgroundColor: 'white'
     },
     itemText: {
         textAlign: 'center',
         width: '40%',
         fontSize: 20,
+        fontWeight: 'bold',
         color: 'red',
         paddingBottom: 5
     }

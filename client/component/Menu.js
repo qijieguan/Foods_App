@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     menuLogo: {
+        paddingBottom: 10,
         fontSize: 26,
         fontWeight: 'bold',
         marginBottom: 10,

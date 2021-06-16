@@ -23,7 +23,7 @@ const Category = ({ onSelect }) => {
 const styles = StyleSheet.create({
     categoryList: {
         flexDirection: 'row',
-        marginBottom: 10,
+        marginBottom: 20,
     },
     categoryView: {
         marginLeft: 8,
@@ -31,10 +31,12 @@ const styles = StyleSheet.create({
         height: 65,
         width: 65,
         borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'gray',
         backgroundColor: 'crimson',
         justifyContent: 'center',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 10,
     },
     categoryText: {
         textAlign: 'center',

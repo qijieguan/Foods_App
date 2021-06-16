@@ -10,9 +10,17 @@ const Stack = () => {
     const Stack = createStackNavigator();
 
     return (
-        <Stack.Navigator initialRouteName="Sign In"  >
-            <Stack.Screen name="Sign In" component={SignIn}/>
-            <Stack.Screen name="Sign Up" component={SignUp}/>
+        <Stack.Navigator initialRouteName="Sign In">
+            <Stack.Screen name="Sign In" component={SignIn}
+                options={{
+                    headerTintColor: 'cornflowerblue',
+                }}
+            />
+            <Stack.Screen name="Sign Up" component={SignUp}
+                options={{
+                    headerTintColor: 'cornflowerblue'
+                }}
+            />
         </Stack.Navigator>
     );
 };

@@ -61,6 +61,10 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: 'gray',
+        shadowColor: '#000',
+        shadowOpacity: 0.8,
+        shadowRadius: 4,
+        elevation: 10,
         justifyContent: 'space-around',
         backgroundColor: 'white'
     },
@@ -74,10 +78,12 @@ const styles = StyleSheet.create({
         marginLeft: '5%',
         width: '90%',
         borderWidth: 1,
-        borderColor: 'gray'  
+        borderColor: 'gray',
+        fontSize: 14 
     },
     SignUpText : {
         marginLeft: 30,
+        fontSize: 14,
         color: 'blue'
     },  
     buttonView: {

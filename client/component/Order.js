@@ -85,13 +85,14 @@ const styles = StyleSheet.create({
     },
     total: {
         marginLeft: '60%',
-        marginTop: 20,
-        marginBottom: 140,
+        marginTop: 10,
+        marginBottom: 150,
         fontSize: 24,
+        fontWeight: 'bold',
         color: 'red',
     },
     btnContainer: {
-        top: 505,
+        top: 495,
         position: 'absolute',
         width: '100%',
     },
@@ -109,7 +110,8 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: 'white',
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold'
     }
 });
 

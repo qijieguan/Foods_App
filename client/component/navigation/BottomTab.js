@@ -74,7 +74,7 @@ const BottomTab = () => {
 const styles = StyleSheet.create({
   tabView: {
     backgroundColor: 'orange',
-    height: 60
+    height: 70,
   },
   tabText: {
     color: 'white',

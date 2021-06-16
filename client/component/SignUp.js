@@ -91,7 +91,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         width: '90%',
         borderWidth: 1,
-        borderColor: 'gray'  
+        borderColor: 'gray',
+        fontSize: 14  
     },
     buttonView: {
         marginLeft: '5%',
