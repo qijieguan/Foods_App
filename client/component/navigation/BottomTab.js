@@ -1,13 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import Home from '../Home.js';
-import Menu from '../Menu.js';
+import MenuStack from './MenuStack.js';
 import Offer from '../Offer.js';
 import Order from '../Order.js';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/dist/FontAwesome5';
-import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 
 
@@ -34,12 +33,12 @@ const BottomTab = () => {
             ),
           }}
         />
-        <Tab.Screen name="Menu" component={Menu}
+        <Tab.Screen name="Menu" component={MenuStack}
           options={{
             tabBarIcon: () => (
-              <MaterialIcons
-                name="menu-book"
-                size={30}
+              <Ionicons
+                name="fast-food-outline"
+                size={38}
                 color="white"
               />
             ),

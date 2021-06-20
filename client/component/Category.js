@@ -1,12 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, Text, TouchableOpacity } from 'react-native';
 
 const Category = ({ onSelect }) => {
     return (
-        <View style={styles.categoryList}>
-            <TouchableOpacity style={styles.categoryView} onPress={() => onSelect("all")}>
-                <Text style={styles.categoryText}>All</Text>
-            </TouchableOpacity>
+        <ScrollView style={styles.categoryList}>
             <TouchableOpacity style={styles.categoryView} onPress={() => onSelect("burger")}>
                 <Text style={styles.categoryText}>Burger</Text>
             </TouchableOpacity>
@@ -16,23 +13,25 @@ const Category = ({ onSelect }) => {
             <TouchableOpacity style={styles.categoryView} onPress={() => onSelect("beverage")}>
                 <Text style={styles.categoryText}>Beverage</Text>
             </TouchableOpacity>
-        </View>
+        </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
     categoryList: {
-        flexDirection: 'row',
         marginBottom: 20,
+        width: '100%',
     },
     categoryView: {
-        marginLeft: 8,
-        marginRight: 8,
-        height: 65,
-        width: 65,
-        borderRadius: 50,
-        backgroundColor: 'crimson',
+        marginLeft: '5%',
+        marginTop: 35,
+        marginBottom: 35,
+        height: 150,
+        width: '90%',
+        borderRadius: 5,
+        backgroundColor: 'cyan',
         justifyContent: 'center',
+        alignItems: 'center',
         shadowColor: '#000',
         shadowOpacity: 0.8,
         shadowRadius: 4,

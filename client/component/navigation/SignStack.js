@@ -5,7 +5,7 @@ import SignUp from '../SignUp.js';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-const Stack = () => {
+const Sign = () => {
 
     const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ const Stack = () => {
             />
             <Stack.Screen name="Sign Up" component={SignUp}
                 options={{
-                    headerTintColor: 'cornflowerblue'
+                    headerTintColor: 'cornflowerblue',
                 }}
             />
         </Stack.Navigator>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Stack;
+export default Sign;

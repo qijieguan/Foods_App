@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import BottomTab from './BottomTab.js';
-import Stack from './Stack.js';
-import { createDrawerNavigator, DrawerItem } from '@react-navigation/drawer';
+import Sign from './SignStack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons'
 
@@ -31,7 +31,7 @@ const Drawer = () => {
                     ),
                 }}
             />
-            <Drawer.Screen name="Sign In" component={Stack}
+            <Drawer.Screen name="Sign In" component={Sign}
                 options={{
                     drawerIcon: () => (
                         <MaterialIcons

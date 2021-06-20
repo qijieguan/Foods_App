@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 
 
 const SignIn = ({ navigation }) => {
@@ -18,21 +20,39 @@ const SignIn = ({ navigation }) => {
                 <Text style={styles.signInLogo}>
                     Sign In
                 </Text>
-                <TextInput
-                    name="email"
-                    style={styles.inputView}
-                    value={email}
-                    onChangeText={email => setEmail(email)}
-                    placeholder="Enter Email"
-                />
-                <TextInput
-                    name="password"
-                    style={styles.inputView}
-                    value={password}
-                    secureTextEntry={true}
-                    onChangeText={password => setPassword(password)}
-                    placeholder="Enter New Password"
-                />
+                <View style={styles.input_container}>
+                    <View style={styles.iconView}>
+                        <MaterialCommunityIcons 
+                            name="email"
+                            size={25}
+                            color="white"
+                        />
+                    </View>
+                    <TextInput
+                        name="email"
+                        style={styles.inputView}
+                        value={email}
+                        onChangeText={email => setEmail(email)}
+                        placeholder="Enter Email"
+                    />
+                </View>
+                <View style={styles.input_container}>
+                    <View style={styles.iconView}>
+                        <Ionicons 
+                            name="eye"
+                            size={25}
+                            color="white"
+                        />
+                    </View>
+                    <TextInput
+                        name="password"
+                        style={styles.inputView}
+                        value={password}
+                        secureTextEntry={true}
+                        onChangeText={password => setPassword(password)}
+                        placeholder="Enter New Password"
+                    />
+                </View>
                 <TouchableOpacity onPress={() => navigation.navigate('Sign Up')}>
                     <Text style={styles.SignUpText}>
                         Sign Up
@@ -54,9 +74,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'beige'
     },
     signInView: {
-        marginTop: 80,
+        marginTop: 75,
         marginLeft: '10%',
-        height: 375,
+        height: 400,
         width: '80%',
         borderRadius: 10,
         borderWidth: 1,
@@ -69,16 +89,28 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     signInLogo: {
+        marginTop: 10,
+        marginBottom: 10,
         textAlign: 'center',
         fontSize: 24,
         fontWeight: 'bold',
-        color: 'lightgreen'
+        color: 'cyan'
     },
-    inputView: {
+    input_container: {
+        flexDirection: 'row',
         marginLeft: '5%',
         width: '90%',
         borderWidth: 1,
         borderColor: 'gray',
+    },
+    iconView: {
+        width: '15%',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        backgroundColor: 'cyan',
+    },
+    inputView: {
+        width: '85%',
         fontSize: 14 
     },
     SignUpText : {

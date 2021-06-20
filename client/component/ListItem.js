@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     getView: {
         paddingTop: 15,
         paddingBottom: 15,
-        backgroundColor: 'red',
+        backgroundColor: 'crimson',
         width: '20%',
         shadowColor: '#000',
         shadowOpacity: 0.8,
