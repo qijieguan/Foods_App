@@ -14,14 +14,16 @@ const MenuExpand = ({ route }) => {
             name: 'Cheeseburger',
             price: 4.50,
             category: 'burger',
-            calories: 700
+            calories: 700,
+            imgURL: 'https://cdn.pixabay.com/photo/2020/06/07/14/28/cute-5270656_1280.jpg'
         },
         {
             id: uuid(),
             name: 'Spicy Chicken Sandwich',
             price: 5.00,
             category: 'burger',
-            calories: 800
+            calories: 800,
+            imgURL: 'https://cdn.pixabay.com/photo/2013/07/13/12/15/chicken-159496_1280.png'
         }
     ];
 
@@ -31,14 +33,16 @@ const MenuExpand = ({ route }) => {
             name: 'Large Fries',
             price: 2.50,
             category: 'side',
-            calories: 600
+            calories: 600,
+            imgURL: 'https://live.staticflickr.com/3704/9622271807_7c3142fdff_b.jpg'
         }, 
         {
             id: uuid(),
             name: '10-pct Chicken Nuggets',
             price: 2.00,
             category: 'side',
-            calories: 800
+            calories: 800,
+            imgURL: 'https://cdn.pixabay.com/photo/2017/04/29/01/11/gold-nugget-2269847_1280.jpg'
         }
     ];
 
@@ -48,21 +52,24 @@ const MenuExpand = ({ route }) => {
             name: 'Drinks',
             price: 1.50,
             category: 'beverage',
-            calories: 150
+            calories: 150,
+            imgURL: 'https://thumbs.dreamstime.com/z/golden-whiskey-pouring-lowball-bourbon-being-poured-glass-over-white-background-126311216.jpg'
         },
         {
             id: uuid(),
             name: 'Coffee',
             price: 1.50,
             category: 'beverage',
-            calories: 150
+            calories: 150,
+            imgURL: 'https://cdn1.photostockeditor.com/c/1712/cup-coffee-latte-in-white-ceramic-mug-drink-drink-image.jpg'
         },
         {
             id: uuid(),
             name: 'Shake',
             price: 2.00,
             category: 'beverage',
-            calories: 200
+            calories: 200,
+            imgURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxh53A7jOs4LUVvHwD6eS5BfPBSA6Lm6M51Q&usqp=CAU'
         }
     ];
 
@@ -90,9 +97,8 @@ const MenuExpand = ({ route }) => {
             }
             else {
                 setCategory(drink);
-                console.log("drinks!");
+    
             }
-            console.log(selectCategory);
             setIsAdd(false);
             //console.log('render!')
         } catch (error) {

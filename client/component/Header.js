@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         height: 50,
         fontSize: 20,
         fontWeight: 'bold',
+        fontFamily: 'fantasy',
         letterSpacing: 2,
         textAlign: 'center',
         color: 'white',
