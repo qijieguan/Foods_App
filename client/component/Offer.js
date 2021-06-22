@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
+
 
 const Offer = () => {
 
@@ -8,6 +10,11 @@ const Offer = () => {
             <Text style={styles.offerText}>
                 Offers currently unavailable!
             </Text>
+            <MaterialIcons
+                name="access-time"
+                size={180}
+                color="orange"
+            />
         </View>
     );
 };
@@ -20,9 +27,11 @@ const styles = StyleSheet.create({
     },
     offerText: {
         textAlign: 'center',
-        marginTop: 200,
+        marginTop: 130,
+        marginBottom: 30,
         width: '70%',
         fontSize: 30,
+        fontWeight: 'bold',
         color: 'orange'
     }
 });

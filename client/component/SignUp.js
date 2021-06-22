@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Alert, TouchableOpacity } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
+
 
 const SignUp = () => {
 
@@ -10,7 +12,20 @@ const SignUp = () => {
     const [confirmPass, setConfirmPass] = useState("");
 
     const handleSubmit = () => {
-        console.log(fname + lname);
+        Alert.alert(
+            "Thank You!",
+            "This feature will be supported in the future!",
+            [
+                {
+                    text: "Cancel",
+                    style: "cancel"
+                },
+                {
+                    text: "Ok",
+                    style: "cancel"
+                }
+            ]
+        );
         setFname("");
         setLname("");
         setEmail("");
@@ -21,9 +36,17 @@ const SignUp = () => {
 
     return (
         <View style={styles.signUpView}>
-            <Text style={styles.signUpLogo}>
-                Sign Up
-            </Text>
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                    <Text style={styles.signUpLogo}>
+                        Sign Up
+                    </Text>
+                    <FontAwesome
+                        name="pencil-square-o"
+                        size={35}
+                        color="cyan"
+                        style={{marginTop: 30}}
+                    />
+                </View>
             <TextInput
                 name="fname"
                 style={styles.inputView}
@@ -79,6 +102,7 @@ const styles = StyleSheet.create({
     },
     signUpLogo: {
         marginTop: 30,
+        marginRight: 12,
         marginBottom: 30, 
         textAlign: 'center',
         fontSize: 24,
@@ -110,7 +134,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'white'
-    }
+    },
 });
 
 export default SignUp;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Alert, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
+import FontAwesome5 from 'react-native-vector-icons/dist/FontAwesome5';
 
 
 const SignIn = ({ navigation }) => {
@@ -10,6 +11,20 @@ const SignIn = ({ navigation }) => {
     const [password, setPassword] = useState("");
 
     const handleSubmit = () => {
+        Alert.alert(
+            "Thank You!",
+            "This feature will be supported in the future!",
+            [
+                {
+                    text: "Cancel",
+                    style: "cancel"
+                },
+                {
+                    text: "Ok",
+                    style: "cancel"
+                }
+            ]
+        );
         setEmail("");
         setPassword("");
     };
@@ -17,9 +32,17 @@ const SignIn = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.signInView}>
-                <Text style={styles.signInLogo}>
-                    Sign In
-                </Text>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                    <Text style={styles.signInLogo}>
+                        Sign In
+                    </Text>
+                    <FontAwesome5
+                        name="leaf"
+                        size={30}
+                        color="cyan"
+                        style={{marginTop: 9}}
+                    />
+                </View>
                 <View style={styles.input_container}>
                     <View style={styles.iconView}>
                         <MaterialCommunityIcons 
@@ -90,6 +113,7 @@ const styles = StyleSheet.create({
     },
     signInLogo: {
         marginTop: 10,
+        marginRight: 10,
         marginBottom: 10,
         textAlign: 'center',
         fontSize: 24,

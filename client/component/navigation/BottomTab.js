@@ -6,7 +6,7 @@ import Offer from '../Offer.js';
 import Order from '../Order.js';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/dist/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 
 
@@ -47,8 +47,8 @@ const BottomTab = () => {
         <Tab.Screen name="Offer" component={Offer}
           options={{
             tabBarIcon: () => (
-              <FontAwesome5
-                name="grin-stars"
+              <MaterialCommunityIcons
+                name="creation"
                 size={30}
                 color="white"
               />
